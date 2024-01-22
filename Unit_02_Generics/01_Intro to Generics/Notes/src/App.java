@@ -7,5 +7,11 @@ public class App {
         myStringProperty.set("Hello");
         System.out.println(myStringProperty.get());
 
+        Property<Integer> myInteger = new Property<Integer>();
+        myInteger.set(3);
+        System.out.println(myInteger.get());
+        myInteger.set(2);
+        System.out.println(myInteger.get());
+
     }
 }
