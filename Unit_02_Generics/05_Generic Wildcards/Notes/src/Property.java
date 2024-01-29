@@ -1,9 +1,8 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class Property<T extends Comparable<T>> implements Inequality<T> {
-
-
-
-    
-
+  
     private T t;
 
     public Property(T t) {
@@ -11,6 +10,7 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
     }
 
     public Property() {
+        
         this.t = null;
     }
 
@@ -45,8 +45,9 @@ public class Property<T extends Comparable<T>> implements Inequality<T> {
         return false; //TODO:  Fix this by actually implementing the code
     }
 
-    public Property<T> fromT(T t) {
-        return new Property<T>(t);
+    public static <T> List<T> fromArrayToList(T[] a){
+        return Arrays.stream(a).toList();
+        
     }
 
 }
