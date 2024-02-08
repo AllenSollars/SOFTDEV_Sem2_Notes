@@ -22,11 +22,15 @@ dependencies {
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+
+    // https://mvnrepository.com/artifact/org.javatuples/javatuples
+    implementation group: 'org.javatuples', name: 'javatuples', version: '1.2'
+
 }
 
 application {
     // Define the main class for the application.
-    mainClass = '_tuples.App'
+    mainClass = 'javatuples2.App'
 }
 
 tasks.named('test') {
